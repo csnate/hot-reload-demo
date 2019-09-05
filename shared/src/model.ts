@@ -1,3 +1,3 @@
 export class Model {
-    public title = 'My Jpt';
+    public title = 'My Title';
 }
