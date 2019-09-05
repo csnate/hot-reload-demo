@@ -1,0 +1,19 @@
+{
+    "extends": "./tslint.json",
+    "rules": {
+        "no-use-before-declare": false,
+        "directive-selector": false,
+        "component-selector": false,
+        "ban": [
+            true,
+            {
+                "name": "fdescribe",
+                "message": "Don't check in focused test suites (fdescribe)"
+            },
+            {
+                "name": "fit",
+                "message": "Don't check in focused tests (fit)"
+            }
+        ]
+    }
+}
