@@ -10,8 +10,8 @@ services:
       - '8100:8100'
       - '9229:9229'
     volumes:
-      - './server/src:/var/build/server/src'
-      - './shared/src:/var/build/shared/src'
+      - './server/src:/var/build/server/src:delegated'
+      - './shared/src:/var/build/shared/src:delegated'
   client:
     build:
       context: .
@@ -21,5 +21,5 @@ services:
     ports:
       - '6543:6543'
     volumes:
-      - './client/src:/var/build/client/src'
-      - './shared/src:/var/build/shared/src'
+      - './client/src:/var/build/client/src:delegated'
+      - './shared/src:/var/build/shared/src:delegated'
