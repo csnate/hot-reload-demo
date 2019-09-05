@@ -4,8 +4,9 @@
     "description": "TBD",
     "main": "server.js",
     "scripts": {
-        "start": "nps",
-        "test": "nps test"
+        "predebug": "rimraf dist/*",
+        "debug": "tsc-watch --onSuccess \"node -r module-alias/register --inspect=0.0.0.0:9229 dist/server/src/server.js\" --onFailure \"echo WHOOPS! Server compilation failed\"",
+        "start": "node -r module-alias/register dist/server/src/server.js"
     },
     "author": "",
     "license": "ISC",
@@ -16,7 +17,6 @@
     "devDependencies": {
         "@types/express": "4.17.1",
         "@types/node": "12.7.2",
-        "nps": "5.9.8",
         "rimraf": "3.0.0",
         "tsc-watch": "2.4.0",
         "typescript": "3.5.3"

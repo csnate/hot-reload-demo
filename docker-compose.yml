@@ -4,21 +4,20 @@ services:
     build:
       context: .
       target: development
-    command: ["npm", "start", "debug.server"]
-    container_name: cia_server
+    command: ["npm", "run", "debug:server"]
+    container_name: server
     ports:
       - '8100:8100'
       - '9229:9229'
     volumes:
       - './server/src:/var/build/server/src'
-      - './server/config:/var/build/server/config'
       - './shared/src:/var/build/shared/src'
   client:
     build:
       context: .
       target: development
-    command: ["npm", "start", "debug.client"]
-    container_name: cia_client
+    command: ["npm", "run", "debug:client"]
+    container_name: client
     ports:
       - '6543:6543'
     volumes:

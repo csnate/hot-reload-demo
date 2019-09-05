@@ -1,28 +1,20 @@
 {
-    "name": "client-and-internal-authentication",
+    "name": "hot-reload-demo",
     "version": "1.0.0",
-    "description": "Authentication project for clients and internal users",
+    "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nps",
-        "test": "nps test",
-        "build": "nps build",
-        "serve": "nps serve",
-        "debug:server": "nps debug.server",
-        "debug:client": "nps debug.client",
-        "postinstall": "nps postinstall"
+        "start": "docker-compose up -d",
+        "debug:server": "npm run debug -C server",
+        "debug:client": "npm run debug -C client",
+        "postinstall": "npm install -C client && npm install -C server"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@git.cnvrmedia.net:7999/gui/client-and-internal-authentication.git"
+        "url": "ssh://git@git.cnvrmedia.net:7999/~ntovo/hot-reload-demo.git"
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
-        "nps": "5.9.8",
-        "nps-utils": "1.7.0"
-    },
-    "devDependencies": {
-        "tslint": "5.19.0"
-    }
+    "dependencies": {},
+    "devDependencies": {}
 }

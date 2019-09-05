@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "nps",
-    "test": "nps test"
+    "start": "ng serve -o",
+    "debug": "ng serve --host 0.0.0.0 --disable-host-check --poll=100",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -36,7 +37,6 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
-    "nps": "5.9.8",
     "protractor": "~5.4.0",
     "rxjs-tslint": "0.1.7",
     "ts-node": "~7.0.0",
