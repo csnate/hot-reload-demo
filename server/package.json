@@ -5,8 +5,7 @@
     "main": "server.js",
     "scripts": {
         "predebug": "rimraf dist/*",
-        "debug": "tsc-watch --onSuccess \"node -r module-alias/register --inspect=0.0.0.0:9229 dist/server/src/server.js\" --onFailure \"echo WHOOPS! Server compilation failed\"",
-        "start": "node -r module-alias/register dist/server/src/server.js"
+        "debug": "tsc-watch --onSuccess \"node -r module-alias/register --inspect=0.0.0.0:9229 dist/server/src/server.js\" --onFailure \"echo WHOOPS! Server compilation failed\""
     },
     "author": "",
     "license": "ISC",
