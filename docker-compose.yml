@@ -19,7 +19,7 @@ services:
     command: ["npm", "run", "debug:client"]
     container_name: client
     ports:
-      - '6543:6543'
+      - '4200:4200'
     volumes:
       - './client/src:/var/build/client/src:delegated'
       - './shared/src:/var/build/shared/src:delegated'

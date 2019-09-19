@@ -18,6 +18,6 @@ RUN npm install --quiet --unsafe-perm --no-progress --no-audit --only=developmen
 
 ## All files will be volume mounted into the container
 
-EXPOSE 6543
+EXPOSE 4200
 EXPOSE 8100
 EXPOSE 9229
